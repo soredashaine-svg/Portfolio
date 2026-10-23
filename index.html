@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rovilyn Shaine J. Soreda | BSIT – IT Support & Data Analytics</title>
+  <meta name="description" content="Portfolio of Rovilyn Shaine J. Soreda, BSIT student at Datamex College of Saint Adeline – IT Support and Data Analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!--
+  =====================================================================
+  PAANO I-EDIT:
+  - Lahat ng text na naka-highlight na DILAW (class="placeholder")
+    ay papalitan mo ng sarili mong info, tapos tanggalin ang class.
+  - Photo: ilagay ang picture mo sa assets/photo.png
+  - Resume: ilagay ang PDF sa assets/resume.pdf
+  - Certificates: ilagay sa assets/certs/ tapos palitan ang src
+  - Palitan ang mga link (GitHub, LinkedIn, email) — hanapin ang "CHANGE"
+  =====================================================================
+-->
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">Shaine <span>Soreda</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#problems">Problem-Solving</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#ailog">AI Log</a></li>
+      <li><a href="#employability">Employability</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#certs">Certificates</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn-primary btn-sm">Hire me</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">Dark</button>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="home">
+  <!-- Moving background: picture + animated gold waves -->
+  <div class="hero-bg" aria-hidden="true"></div>
+  <svg class="hero-waves" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gold" x1="0" x2="1">
+        <stop offset="0" stop-color="#f6d58e" stop-opacity="0" />
+        <stop offset=".5" stop-color="#e8b95a" />
+        <stop offset="1" stop-color="#f6d58e" stop-opacity="0" />
+      </linearGradient>
+      <linearGradient id="white" x1="0" x2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity="0" />
+        <stop offset=".5" stop-color="#fff" stop-opacity=".85" />
+        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+      </linearGradient>
+    </defs>
+    <g class="wave-move w1">
+      <path d="M-200 360 C 100 220, 400 220, 700 340 S 1300 470, 1640 300" stroke="url(#white)" stroke-width="10" fill="none" opacity=".35" />
+      <path class="shimmer" d="M-200 360 C 100 220, 400 220, 700 340 S 1300 470, 1640 300" stroke="url(#gold)" stroke-width="2" fill="none" />
+    </g>
+    <g class="wave-move w2">
+      <path d="M-200 300 C 150 420, 450 420, 760 300 S 1250 160, 1640 360" stroke="url(#white)" stroke-width="6" fill="none" opacity=".45" />
+      <path class="shimmer s2" d="M-200 300 C 150 420, 450 420, 760 300 S 1250 160, 1640 360" stroke="url(#gold)" stroke-width="1.6" fill="none" />
+    </g>
+    <g class="wave-move w3">
+      <path class="shimmer s3" d="M-200 420 C 200 330, 520 480, 820 390 S 1280 250, 1640 420" stroke="url(#white)" stroke-width="2" fill="none" />
+    </g>
+  </svg>
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div>
+      <span class="badge-open"><span class="dot"></span> Open to work</span>
+      <p class="hi">Hi, I am</p>
+      <div class="name">Rovilyn Shaine J. Soreda</div>
+      <div class="typed" id="typed"></div>
+      <h1>I'm learning to fix tech problems and turn messy data into clear reports.</h1>
+      <p class="intro">Hi, I'm Shaine Soreda, a BSIT student at Datamex College of Saint Adeline. I'm learning to troubleshoot computers, and I organize records and build spreadsheets and charts that make data easy to understand.</p>
+      <div class="chips">
+        <span class="chip">IT Support</span>
+        <span class="chip">Data Analytics</span>
+        <span class="chip">Excel &amp; Google Sheets</span>
+      </div>
+      <div class="socials">
+        <!-- CHANGE: GitHub link -->
+        <a href="https://github.com/soredashaine-svg" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/shaine-soreda-534973442/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-1.9 3.7-1.9 4 0 4.7 2.6 4.7 6V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>
+        </a>
+        <!-- CHANGE: email -->
+        <a href="mailto:soredashaine@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zM4 7v.5l8 5 8-5V7l-8 5z"/></svg>
+        </a>
+      </div>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Hire me</a>
+        <a href="assets/resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">View resume</a>
+      </div>
+      <div class="stats">
+        <!-- CHANGE: numbers update automatically from data-count -->
+        <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Troubleshooting scenarios</div></div>
+        <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Webinar certificates</div></div>
+        <div class="stat"><div class="num" data-count="2">0</div><div class="lbl">Focus fields</div></div>
+      </div>
+    </div>
+
+    <div class="photo-wrap">
+      <span class="float-heart h1">♥</span>
+      <span class="float-heart h2">♡</span>
+      <span class="float-heart h3">♥</span>
+      <div class="portrait tilt">
+        <!-- CHANGE: picture mo (walang background) sa assets/photo.png -->
+        <div class="cutout-wrap"><img class="cutout" src="assets/photo.png" alt="Photo of Rovilyn Shaine J. Soreda" /></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== PROFILE ===================== -->
+<section id="profile">
+  <div class="container">
+    <div class="section-title reveal"><h2>Professional profile</h2></div>
+    <div class="grid-2">
+      <div class="card reveal">
+        <div class="target">Target roles: Help Desk Technician, Data Encoder, Reporting Assistant, Support Representative</div>
+        <p>I am Rovilyn Shaine J. Soreda, a Bachelor of Science in Information Technology student at Datamex College of Saint Adeline in Parañaque City (2023 – 2027). I finished senior high school under the STEM strand at Parañaque National High School – Main, after junior high at La Huerta National High School.</p>
+        <p>From 2021 to 2022, I worked at my aunt's computer shop. I watched over the shop, assisted customers who used the computers, and handled printing services. It was my first experience of helping people with technology, and it taught me to be patient, responsible and organized.</p>
+        <p>In August 2026, I joined five IT webinars on building secure networks with Cisco Packet Tracer, modern cyber threats, network security and zero trust, digital office skills, and IoT security.</p>
+        <p>Through my BSIT studies, I have developed skills in Microsoft Excel and printing services. I value responsibility, patience and teamwork, and I want to keep learning. I am open to any role in the IT field where I can grow and help people with technology.</p>
+      </div>
+      <div class="card facts reveal tilt">
+        <h3>Quick facts</h3>
+        <p><strong>Program:</strong> BSIT</p>
+        <p><strong>School:</strong> Datamex College of Saint Adeline</p>
+        <p><strong>Years:</strong> 2023 – 2027</p>
+        <p><strong>Senior high:</strong> STEM, Parañaque National High School – Main</p>
+        <p><strong>Work:</strong> Computer shop, 2021 – 2022</p>
+        <p><strong>Location:</strong> Parañaque City</p>
+      </div>
+    </div>
+
+    <div class="section-title reveal" style="margin-top:70px"><h2>Education and experience</h2><p>My path so far.</p></div>
+    <div class="timeline">
+      <div class="tl-item card reveal">
+        <div class="when">2023 – 2027 (expected)</div>
+        <h3>Bachelor of Science in Information Technology</h3>
+        <p>Datamex College of Saint Adeline, Parañaque City</p>
+      </div>
+      <div class="tl-item card reveal">
+        <div class="when">August 3 – 13, 2026</div>
+        <h3>5 IT Webinars – Ethel Programming Computer Programming Services</h3>
+        <p>Cisco Packet Tracer secure networks, cyber threats, network security and zero trust, digital office skills, and IoT security.</p>
+      </div>
+      <div class="tl-item card reveal">
+        <div class="when">2021 – 2023</div>
+        <h3>Senior High School – STEM Strand</h3>
+        <p>Parañaque National High School – Main</p>
+      </div>
+      <div class="tl-item card reveal">
+        <div class="when">2021 – 2022</div>
+        <h3>Computer Shop Attendant</h3>
+        <p>My aunt's computer shop, Parañaque City · Watched over the shop, assisted customers and handled printing services.</p>
+      </div>
+      <div class="tl-item card reveal">
+        <div class="when">2016 – 2021</div>
+        <h3>Junior High School</h3>
+        <p>La Huerta National High School</p>
+      </div>
+      <div class="tl-item card reveal">
+        <div class="when">2010 – 2016</div>
+        <h3>Primary Education</h3>
+        <p>Parañaque Elementary School Central</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TOOLS (subnet calculator) ===================== -->
+<section id="tools">
+  <div class="container">
+    <div class="section-title reveal"><h2>Network tools</h2><p>A working IPv4 subnet calculator in JavaScript. Try any address and prefix length.</p></div>
+    <div class="card calc reveal">
+      <label for="ipInput">IPv4 address</label>
+      <input type="text" id="ipInput" value="192.168.1.25" autocomplete="off" />
+      <label for="cidrInput" style="margin-top:16px">Prefix length (CIDR): <b id="cidrLabel">/24</b></label>
+      <input type="range" id="cidrInput" min="1" max="32" value="24" />
+      <div class="calc-error" id="calcError"></div>
+      <div class="calc-results">
+        <div><span>Network address</span><b id="rNet">-</b></div>
+        <div><span>Broadcast address</span><b id="rBc">-</b></div>
+        <div><span>Subnet mask</span><b id="rMask">-</b></div>
+        <div><span>Usable hosts</span><b id="rHosts">-</b></div>
+        <div><span>First usable host</span><b id="rFirst">-</b></div>
+        <div><span>Last usable host</span><b id="rLast">-</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="container">
+    <div class="section-title reveal"><h2>Technical skills</h2><p>Every skill here is tied to evidence. If I can't show it, I don't claim it.</p></div>
+
+    <div class="grid-2-eq">
+      <div class="skill-cards">
+        <div class="card skill-card tilt reveal"><div class="ico">📊</div><b>Excel</b><small>Formulas &amp; charts</small></div>
+        <div class="card skill-card tilt reveal"><div class="ico">📗</div><b>Google Sheets</b><small>Shared reports</small></div>
+        <div class="card skill-card tilt reveal"><div class="ico">🖥️</div><b>Hardware</b><small>Shop experience</small></div>
+        <div class="card skill-card tilt reveal"><div class="ico">🌐</div><b>Networking</b><small>Basics &amp; subnetting</small></div>
+        <div class="card skill-card tilt reveal"><div class="ico">🎧</div><b>IT Support</b><small>Helping users</small></div>
+        <div class="card skill-card tilt reveal"><div class="ico">⌨️</div><b>Data Encoding</b><small>Accurate records</small></div>
+      </div>
+      <div class="cube-area reveal">
+        <div class="scene" id="scene">
+          <div class="cube" id="cube">
+            <div class="face f1">Excel<small>Data &amp; charts</small></div>
+            <div class="face f2">Sheets<small>Reports</small></div>
+            <div class="face f3">Hardware<small>Troubleshooting</small></div>
+            <div class="face f4">Networking<small>TCP/IP basics</small></div>
+            <div class="face f5">IT Support<small>Help desk</small></div>
+            <div class="face f6">Encoding<small>Records</small></div>
+          </div>
+        </div>
+        <p class="cube-hint">Drag the cube to spin it ♡ Each side is a skill area with evidence on this page.</p>
+      </div>
+    </div>
+
+    <div class="filters reveal" style="margin-top:40px">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="data">Data</button>
+      <button class="filter-btn" data-filter="support">IT Support</button>
+      <button class="filter-btn" data-filter="network">Networking</button>
+      <button class="filter-btn" data-filter="web">Web &amp; Tools</button>
+    </div>
+    <div class="table-wrap reveal">
+      <table id="skillTable">
+        <thead><tr><th>Skill</th><th>Level</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr data-cat="data"><td>Excel (formulas, pivot tables, charts)</td><td><span class="level beg">Beginner</span></td><td>Digital Office Mastery webinar</td></tr>
+          <tr data-cat="data"><td>Google Sheets</td><td><span class="level beg">Beginner</span></td><td>Digital Office Mastery webinar</td></tr>
+          <tr data-cat="data"><td>Data encoding and office software</td><td><span class="level beg">Beginner</span></td><td>Digital Office Mastery webinar; computer shop work</td></tr>
+          <tr data-cat="support"><td>Hardware troubleshooting</td><td><span class="level beg">Beginner</span></td><td>Troubleshooting cases 1 and 2 (Problem-solving section); computer shop work</td></tr>
+          <tr data-cat="support"><td>User support and help desk</td><td><span class="level beg">Beginner</span></td><td>Troubleshooting cases 1 and 2</td></tr>
+          <tr data-cat="network"><td>Network security basics (zero trust, cyber threats)</td><td><span class="level beg">Beginner</span></td><td>3 security webinars (Certificates section)</td></tr>
+          <tr data-cat="web"><td>HTML, CSS, JavaScript</td><td><span class="level beg">Beginner</span></td><td>This website; 3 projects; cases 3 to 5</td></tr>
+          <tr data-cat="web"><td>Responsible AI use</td><td><span class="level beg">Beginner</span></td><td>AI usage log</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <div class="container">
+    <div class="section-title reveal"><h2>Projects</h2><p>Three web projects I built with HTML, CSS and JavaScript and published on GitHub Pages: an online store, a grade management system and a task app. Click a screenshot to open the live demo, or view the code on GitHub.</p></div>
+    <div class="grid-3">
+      <div class="card project-card tilt reveal">
+        <span class="ptag">Project 1</span>
+        <h3>MC.SNEAKER</h3>
+        <a href="https://soredashaine-svg.github.io/MC.SNEAKER/" target="_blank" rel="noopener" aria-label="Open MC.SNEAKER live project">
+          <img class="project-screenshot" src="image/mc.sneaker.png" alt="Screenshot of the MC.SNEAKER storefront showing sneaker products" loading="lazy" />
+        </a>
+        <p><strong>MC.SNEAKER</strong> is an online sneaker storefront website. It showcases original-style sneakers, lets visitors search for the product they want, and offers delivery across Metro Manila. It is published as a live website on GitHub Pages.</p>
+        <div class="actions">
+          <a href="https://soredashaine-svg.github.io/MC.SNEAKER/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Live Demo</a>
+          <a href="https://github.com/soredashaine-svg/MC.SNEAKER" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub Repository</a>
+        </div>
+      </div>
+      <div class="card project-card tilt reveal">
+        <span class="ptag">Project 2</span>
+        <h3>Student Grade System</h3>
+        <a href="https://soredashaine-svg.github.io/student_grade_system/" target="_blank" rel="noopener" aria-label="Open Student Grade System live demo">
+          <img class="project-screenshot" src="image/Student%20Grade%20System.png" alt="Screenshot of the Student Grade Management System dashboard" loading="lazy" />
+        </a>
+        <p>The <strong>Student Grade System</strong> is a web-based system for recording and managing student grades. Its dashboard keeps all grades in one place, so teachers can easily check and track each student's records instead of computing them by hand.</p>
+        <div class="actions">
+          <a href="https://soredashaine-svg.github.io/student_grade_system/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Live Demo</a>
+          <a href="https://github.com/soredashaine-svg/student_grade_system" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub Repository</a>
+        </div>
+      </div>
+      <div class="card project-card tilt reveal">
+        <span class="ptag">Project 3</span>
+        <h3>To-Do List App</h3>
+        <a href="https://soredashaine-svg.github.io/TODO_LIST_APP/" target="_blank" rel="noopener" aria-label="Open To-Do List App live demo">
+          <img class="project-screenshot" src="image/To_Do%20List.png" alt="Screenshot of the To-Do List app with task entry, search, and filters" loading="lazy" />
+        </a>
+        <p>The <strong>To-Do List App</strong> is a task management app for daily tasks. Users can add tasks, organize them, search for a specific task, and use filters to track which tasks are done and which are still pending.</p>
+        <div class="actions">
+          <a href="https://soredashaine-svg.github.io/TODO_LIST_APP/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Live Demo</a>
+          <a href="https://github.com/soredashaine-svg/TODO_LIST_APP" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub Repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEM-SOLVING ===================== -->
+<section id="problems">
+  <div class="container">
+    <div class="section-title reveal"><h2>Problem-solving</h2><p>How I approach problems: problem, possible causes, diagnosis, solution, lesson.</p></div>
+    <div class="cases">
+      <p class="reveal" style="text-align:center;max-width:760px;margin:0 auto 18px;font-size:.9rem"><b>Five scenarios</b> based on the work in this portfolio: two from a computer shop like the one where I worked, and three from my own web projects.</p>
+
+      <details class="case reveal">
+        <summary>Case 1: Computer shop printer not printing (scenario)</summary>
+        <div class="body">
+          <p><strong>Problem:</strong> At a computer shop like my aunt's, a customer sent a document to the printer but nothing came out. The file stayed in the print queue, and more customers were waiting for their printouts.</p>
+          <p><strong>Possible causes:</strong> Printer turned off or offline, paper jam or no paper, the wrong default printer selected, or a stuck job in the Print Spooler.</p>
+          <p><strong>Diagnosis:</strong></p>
+          <ol class="list"><li>Checked the printer itself: it was on, had paper, no jam and no blinking error light.</li><li>Printed a test page using the printer's own button. It printed, so the printer was fine and the problem was on the computer side.</li><li>Opened the print queue and saw an old job marked "Error" at the top, blocking all the jobs behind it.</li></ol>
+          <p><strong>Solution:</strong></p>
+          <ol class="list"><li>Cancelled the stuck job. When it would not delete, opened <code>services.msc</code> and restarted the <b>Print Spooler</b> service.</li><li>Checked that the correct printer was set as the default printer.</li><li>Printed a test page from the computer, then reprinted the customers' documents in order.</li></ol>
+          <p><strong>Lesson learned:</strong> One stuck job can block the whole queue. Test the printer by itself first, so you know if the problem is the printer or the computer.</p>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>Case 2: Shop computer has no internet (scenario)</summary>
+        <div class="body">
+          <p><strong>Problem:</strong> A customer at the computer shop needed to submit an online form, but one unit showed "No Internet". The other units in the shop were online.</p>
+          <p><strong>Possible causes:</strong> Loose or unplugged LAN cable, network adapter disabled, no IP address from the router, or a wrong DNS setting.</p>
+          <p><strong>Diagnosis:</strong></p>
+          <ol class="list"><li>The other units worked, so the router and internet line were fine. The problem was only on that unit.</li><li>Checked the LAN cable and the port lights at the back of the unit.</li><li>Ran <code>ipconfig</code> and saw an address starting with 169.254, which means the unit did not get an IP address from the router.</li></ol>
+          <p><strong>Solution:</strong></p>
+          <ol class="list"><li>Plugged the LAN cable in firmly until it clicked.</li><li>Ran <code>ipconfig /release</code> and <code>ipconfig /renew</code> to get a new IP address.</li><li>Opened a website to confirm, then let the customer continue.</li></ol>
+          <p><strong>Lesson learned:</strong> Check if the problem is one device or the whole network first. It tells you where to look and saves time.</p>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>Case 3: Images missing on the live GitHub Pages site (scenario)</summary>
+        <div class="body">
+          <p><strong>Problem:</strong> Project screenshots like the ones in my Projects section showed on my computer, but after uploading to GitHub Pages some images appeared as broken icons on the live site.</p>
+          <p><strong>Possible causes:</strong> Wrong file path, the image was not uploaded to GitHub, a capital letter in the file name that does not match the code, or a space in the file name.</p>
+          <p><strong>Diagnosis:</strong></p>
+          <ol class="list"><li>Opened the browser DevTools (F12) and checked the Console. It showed a 404 error for the image file.</li><li>Compared the file name in the repository with the name in the code. For example, <code>image/student grade system.png</code> in the code versus <code>Student Grade System.png</code> in GitHub.</li><li>Learned that Windows ignores capital letters in file names, but GitHub Pages does not, so it worked on my computer only.</li></ol>
+          <p><strong>Solution:</strong></p>
+          <ol class="list"><li>Made the path in the code match the real file name exactly, including capital letters.</li><li>Replaced spaces with <code>%20</code> in the path (e.g. <code>image/Student%20Grade%20System.png</code>).</li><li>Committed the fix, waited for GitHub Pages to update, and refreshed the live site to confirm all images loaded.</li></ol>
+          <p><strong>Lesson learned:</strong> Always test the live site, not only the local copy. Simple file names without spaces avoid this problem.</p>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>Case 4: Student Grade System shows a wrong average (scenario)</summary>
+        <div class="body">
+          <p><strong>Problem:</strong> In a grade system like my Student Grade System project, a student with grades 85 and 90 got an average of 4295 instead of 87.5. A wrong grade could be reported to the teacher.</p>
+          <p><strong>Possible causes:</strong> The inputs are read as text, the wrong number of subjects is used in the division, or an empty input is counted.</p>
+          <p><strong>Diagnosis:</strong></p>
+          <ol class="list"><li>Used <code>console.log()</code> to check the total. It showed <code>"8590"</code> instead of <code>175</code>.</li><li>This means the values from the input boxes were text, so <code>+</code> joined them together instead of adding them.</li></ol>
+          <p><strong>Solution:</strong></p>
+          <ol class="list"><li>Converted each input to a number with <code>Number(input.value)</code> before adding.</li><li>Added a check so empty or invalid grades (below 0 or above 100) show an error message.</li><li>Tested known examples by hand: 85 and 90 give 87.5, and 75, 80 and 90 give 81.67.</li></ol>
+          <p><strong>Lesson learned:</strong> Values from forms are always text. Check results with examples I can compute myself, like I do with reports in Excel.</p>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>Case 5: To-Do List tasks disappear after refresh (scenario)</summary>
+        <div class="body">
+          <p><strong>Problem:</strong> In a task app like my To-Do List App, a user added tasks, refreshed the page, and all tasks were gone.</p>
+          <p><strong>Possible causes:</strong> Tasks were only kept in a JavaScript variable, the save code was not called after adding a task, or the saved data was not loaded when the page opened.</p>
+          <p><strong>Diagnosis:</strong></p>
+          <ol class="list"><li>Opened DevTools (F12), then Application → Local Storage. There was no saved task list.</li><li>Found that tasks were only stored in an array, which resets every time the page reloads.</li></ol>
+          <p><strong>Solution:</strong></p>
+          <ol class="list"><li>Saved the list after every add, edit or delete with <code>localStorage.setItem("tasks", JSON.stringify(tasks))</code>.</li><li>Loaded it when the page opens with <code>JSON.parse(localStorage.getItem("tasks")) || []</code>.</li><li>Tested by adding, completing and deleting tasks, then refreshing and closing the browser to confirm they stayed.</li></ol>
+          <p><strong>Lesson learned:</strong> Data in a variable is lost on refresh. If users need it later, it has to be saved somewhere, and I should test what happens after a refresh.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECURITY ===================== -->
+<section id="security">
+  <div class="container">
+    <div class="section-title reveal"><h2>Cybersecurity case study: SQL injection</h2><p>A defensive look at a common web weakness and how developers prevent it. I built my security basics through three webinars on cyber threats, zero trust and IoT security (see Certificates).</p></div>
+    <div class="grid-2-eq">
+      <div class="card reveal">
+        <h3>1. What is the vulnerability?</h3>
+        <p>SQL injection happens when an app puts what a user types straight into a database query. The database can't tell the real query from the user's text, so an attacker's SQL can run as part of it.</p>
+        <h3 style="margin-top:18px">2. How can it happen?</h3>
+        <p>It happens when a query is built by joining strings. Login forms and search boxes are the usual targets.</p>
+        <p class="label-bad">✗ Vulnerable: do not use</p>
+<pre class="vuln"><code>$sql = "SELECT * FROM users WHERE username = '"
+     . $_POST['user'] . "'";</code></pre>
+        <p class="label-good">✓ Safe: prepared statement</p>
+<pre class="safe"><code>$stmt = $pdo-&gt;prepare(
+  "SELECT * FROM users WHERE username = ?");
+$stmt-&gt;execute([$_POST['user']]);</code></pre>
+        <p>With a prepared statement, the query is fixed first and the input is sent separately as data.</p>
+      </div>
+      <div class="card reveal">
+        <h3>3. What are the risks?</h3>
+        <ul class="list"><li>Logging in without a valid password.</li><li>Reading private data.</li><li>Changing or deleting records.</li><li>Legal problems, e.g. under the Data Privacy Act of 2012.</li></ul>
+        <h3 style="margin-top:18px">4. How can developers prevent it?</h3>
+        <ul class="list"><li>Use prepared statements for every query with user input.</li><li>Validate input type and length.</li><li>Hash passwords; never store plain text.</li><li>Give the database account only the permissions it needs.</li><li>Show generic error messages to users.</li></ul>
+        <h3 style="margin-top:18px">5. Security practices</h3>
+        <ul class="list"><li>Test only on your own system.</li><li>Keep software updated.</li><li>Monitor failed logins.</li><li>Use HTTPS and regular backups.</li><li>Follow the OWASP Top 10.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AI LOG ===================== -->
+<section id="ailog">
+  <div class="container">
+    <div class="section-title reveal"><h2>AI usage log</h2><p>How I used AI tools in this portfolio, and what I checked myself.</p></div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>Date</th><th>Task</th><th>AI assistance</th><th>My verification / result</th></tr></thead>
+        <tbody>
+          <tr><td>Oct 2026</td><td>Build the portfolio website</td><td>Generated the HTML, CSS and JavaScript for the pink layout, dark mode, skills cube and certificate gallery.</td><td>Opened the site in the browser and checked every section against my own details. Replaced wrong information and removed content that was not mine.</td></tr>
+          <tr><td>Oct 2026</td><td>Subnet calculator</td><td>Wrote the IPv4 calculation code.</td><td>Tested known examples: 192.168.1.25/24 gives network 192.168.1.0, broadcast 192.168.1.255 and 254 usable hosts. 10.0.5.77/27 gives network 10.0.5.64, broadcast 10.0.5.95 and 30 hosts. Both match my manual computation.</td></tr>
+          <tr><td>Oct 2026</td><td>Reflection</td><td>Organized my own story (STEM strand, wanting to be a nurse, learning Excel and coding) into paragraphs.</td><td>The ideas are mine. I checked that the paragraphs match what really happened and still need to write the remaining paragraphs myself.</td></tr>
+          <tr><td>Oct 2026</td><td>Problem-solving cases</td><td>Drafted five troubleshooting scenarios based on my computer shop work and my web projects.</td><td>I checked the troubleshooting steps and commands, such as ipconfig, the Print Spooler restart, file paths on GitHub Pages, Number() and localStorage, and I can explain each step.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid-2-eq" style="margin-top:24px">
+      <div class="card reveal"><h3>What did AI help me accomplish?</h3><p>AI helped me build the website layout and the subnet calculator, and draft troubleshooting scenarios.</p></div>
+      <div class="card reveal"><h3>What did I personally verify?</h3><p>I checked all my personal details, school history and work experience. I tested the subnet calculator with known examples and removed anything that was wrong or not mine.</p></div>
+      <div class="card reveal"><h3>What did I learn from using AI?</h3><p>AI is useful for drafting and organizing, but it needs clear and correct information from me. I learned to give it my own facts and to review the result before using it, instead of copying it as it is.</p></div>
+      <div class="card reveal"><h3>What limitations or errors did I find?</h3><p>AI mixed up information at first and used the details of someone else. It also made guesses, such as saying my skill level was Intermediate or calling a family shop my own. I corrected these and made sure the site only says what is true about me.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EMPLOYABILITY ===================== -->
+<section id="employability">
+  <div class="container">
+    <div class="section-title reveal"><h2>Employability</h2><p>Evidence that I can explain my work, not only build it.</p></div>
+    <div class="card employability-video reveal">
+      <h3>Mock Interview</h3>
+      <video controls preload="metadata" playsinline aria-label="Mock interview video">
+        <source src="assets/Mock%20Interview.mp4" type="video/mp4" />
+        Your browser does not support MP4 video. <a href="assets/Mock%20Interview.mp4">Download the video</a>.
+      </video>
+      <a href="assets/Mock%20Interview.mp4" download class="btn btn-outline btn-sm">Download video</a>
+    </div>
+
+    <div class="card reveal" style="margin-top:24px">
+      <h3>Career plan</h3>
+      <div class="career-grid">
+        <div><span>Target position</span>Help Desk Technician, Data Encoder, Reporting Assistant, Support Representative</div>
+        <div><span>Target IT field</span>IT Support and Data Analytics</div>
+        <div><span>My current skills</span>Excel, Google Sheets, charts, basic networking, hardware, data encoding</div>
+        <div><span>Skills I need to improve</span>SQL and databases, advanced Excel (pivot tables and dashboards), networking, and hardware troubleshooting</div>
+        <div><span>Technologies to learn</span>Power BI, MySQL, Cisco Packet Tracer, and more web development</div>
+        <div><span>Certifications to consider</span>Google IT Support Certificate, Microsoft Excel (MOS), and Cisco CCNA (Introduction to Networks)</div>
+      </div>
+      <div class="goals">
+        <div class="goal"><b>6 months</b><span>Finish my BSIT requirements, practice Excel pivot tables and charts, and practice SQL and networking basics every week.</span></div>
+        <div class="goal"><b>1 year</b><span>Take the Google IT Support or Microsoft Excel (MOS) certification, and apply for an internship or entry-level role as a Help Desk Technician or Data Encoder.</span></div>
+        <div class="goal"><b>3 years</b><span>Work as an IT Support or Data Analytics staff member, and grow toward a role that uses data and reporting, such as Reporting Analyst.</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== RESUME ===================== -->
+<section id="resume">
+  <div class="container">
+    <div class="section-title reveal"><h2>Resume</h2><p>A one-page IT resume. Read it below or open the PDF.</p></div>
+    <p style="text-align:center;margin-bottom:22px"><a href="assets/resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">View resume (PDF)</a></p>
+    <div class="resume reveal">
+      <aside>
+        <div class="resume-photo">SS<img src="assets/photo.png" alt="" onerror="this.remove()" /></div>
+        <h4>Contact</h4>
+        <p style="font-size:.9rem">0945 411 0790<br/>soredashaine@gmail.com<br/>7347 A. Bonifacio St., San Dionisio, Parañaque City<br/><a href="https://github.com/soredashaine-svg">github.com/soredashaine-svg</a><br/><a href="https://www.linkedin.com/in/shaine-soreda-534973442/" target="_blank" rel="noopener">linkedin.com/in/shaine-soreda-534973442</a></p>
+        <h4>Education</h4>
+        <div class="r-side"><b>2023 – 2027 · Tertiary</b><br/>BS Information Technology<br/><small>Datamex College of Saint Adeline</small></div>
+        <div class="r-side"><b>2021 – 2023 · Senior High</b><br/>STEM Strand<br/><small>Parañaque National High School – Main</small></div>
+        <div class="r-side"><b>2016 – 2021 · Junior High</b><br/><small>La Huerta National High School</small></div>
+        <div class="r-side"><b>2010 – 2016 · Primary</b><br/><small>Parañaque Elementary School Central</small></div>
+        <h4>Technical skills</h4>
+        <ul><li>Microsoft Excel</li><li>Google Sheets &amp; charts</li><li>Data encoding</li><li>Basic networking (Cisco Packet Tracer)</li><li>Computer hardware basics</li><li>Printing &amp; office equipment</li></ul>
+        <h4>Languages</h4>
+        <ul><li>Filipino</li><li>English</li></ul>
+      </aside>
+      <main>
+        <div class="rname">Rovilyn Shaine J. Soreda</div>
+        <div class="rrole">IT Support · Data Analytics</div>
+        <h4>Profile</h4>
+        <p style="font-size:.92rem">Detail-oriented BSIT student at Datamex College of Saint Adeline with hands-on experience in printing services and assisting customers at a computer shop. Skilled in Microsoft Excel and Google Sheets, with a working knowledge of basic networking and computer hardware. Eager to support an IT or administrative team while continuing to learn and grow in a professional setting.</p>
+        <h4>Work experience</h4>
+        <div class="r-item"><b>Computer Shop Attendant</b><small>Computer Shop, Parañaque City · 2021 – 2022</small>
+          <ul class="list"><li>Watched over the shop and assisted customers using the computers.</li><li>Handled printing services for customers' documents.</li></ul></div>
+        <h4>Seminars &amp; webinars</h4>
+        <div class="r-item"><b>Building Secure Networks with Cisco Packet Tracer</b><small>August 3, 2026</small></div>
+        <div class="r-item"><b>Cyber Frontlines 2026: Outsmarting Modern Cyber Threats</b><small>August 3, 2026</small></div>
+        <div class="r-item"><b>The Future of Network Security, AI, Automation and Zero Trust</b><small>August 5, 2026</small></div>
+        <div class="r-item"><b>Digital Office Mastery: Essential Skills for Computer &amp; Administrative Staff</b><small>August 5, 2026</small></div>
+        <div class="r-item"><b>Connected but Protected: IoT Security Essentials</b><small>August 13, 2026</small></div>
+        <small>All online, by Ethel Programming Computer Programming Services.</small>
+        <h4>Soft skills</h4>
+        <p style="font-size:.92rem">Time management · Organization · Communication · Adaptability · Problem-solving · Customer service · Team collaboration</p>
+        <h4>References</h4>
+        <div class="r-refs">
+          <div><b>Evelyn J. Soreda</b><br/>0994 770 2693</div>
+          <div><b>Sherry Mae Flores</b><br/>0985 155 7903</div>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATES ===================== -->
+<section id="certs">
+  <div class="container">
+    <div class="section-title reveal"><h2>Certificates and achievements</h2><p>Five webinars from Ethel Programming Computer Programming Services, August 2026. Click a certificate to view it larger.</p></div>
+    <div class="gallery">
+      <div class="cert reveal" data-src="assets/certs/cert-cisco-packet-tracer.jpg" data-caption="Building Secure Networks with Cisco Packet Tracer">
+        <div class="thumb"><img src="assets/certs/cert-cisco-packet-tracer.jpg" alt="Certificate: Building Secure Networks with Cisco Packet Tracer" loading="lazy" /></div>
+        <div class="cap"><b>Building Secure Networks with Cisco Packet Tracer</b><br/>1-hour webinar · August 3, 2026</div>
+      </div>
+      <div class="cert reveal" data-src="assets/certs/cert-cyber-frontlines.jpg" data-caption="Cyber Frontlines 2026: Outsmarting Modern Cyber Threats">
+        <div class="thumb"><img src="assets/certs/cert-cyber-frontlines.jpg" alt="Certificate: Cyber Frontlines 2026: Outsmarting Modern Cyber Threats" loading="lazy" /></div>
+        <div class="cap"><b>Cyber Frontlines 2026: Outsmarting Modern Cyber Threats</b><br/>1-hour webinar · August 3, 2026</div>
+      </div>
+      <div class="cert reveal" data-src="assets/certs/cert-network-security-zero-trust.jpg" data-caption="The Future of Network Security, AI, Automation and Zero Trust">
+        <div class="thumb"><img src="assets/certs/cert-network-security-zero-trust.jpg" alt="Certificate: The Future of Network Security, AI, Automation and Zero Trust" loading="lazy" /></div>
+        <div class="cap"><b>The Future of Network Security, AI, Automation and Zero Trust</b><br/>2-hour webinar · August 5, 2026</div>
+      </div>
+      <div class="cert reveal" data-src="assets/certs/cert-digital-office.jpg" data-caption="Digital Office Mastery: Essential Skills for Computer &amp; Administrative Staff">
+        <div class="thumb"><img src="assets/certs/cert-digital-office.jpg" alt="Certificate: Digital Office Mastery: Essential Skills for Computer &amp; Administrative Staff" loading="lazy" /></div>
+        <div class="cap"><b>Digital Office Mastery: Essential Skills for Computer &amp; Administrative Staff</b><br/>1-hour webinar · August 5, 2026</div>
+      </div>
+      <div class="cert reveal" data-src="assets/certs/cert-iot-security.jpg" data-caption="Connected but Protected: IoT Security Essentials for a Safer Smart World">
+        <div class="thumb"><img src="assets/certs/cert-iot-security.jpg" alt="Certificate: Connected but Protected: IoT Security Essentials for a Safer Smart World" loading="lazy" /></div>
+        <div class="cap"><b>Connected but Protected: IoT Security Essentials for a Safer Smart World</b><br/>1-hour webinar · August 13, 2026</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GITHUB ===================== -->
+<section id="github">
+  <div class="container">
+    <div class="section-title reveal"><h2>GitHub</h2><p>Visit my GitHub profile.</p></div>
+    <p style="text-align:center;margin-bottom:22px">
+      <a href="https://github.com/soredashaine-svg" target="_blank" rel="noopener" class="btn btn-primary">GitHub profile</a>
+    </p>
+    <ul class="repo-list" style="max-width:760px;margin:0 auto">
+      <li class="reveal"><a href="https://github.com/soredashaine-svg/portfolio" target="_blank" rel="noopener">portfolio</a>: source code of this website.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title reveal"><h2>Contact</h2><p>Open to help desk, support, data encoding and reporting roles. Messages open in your email app.</p></div>
+    <div class="grid-2-eq">
+      <div class="card contact-info reveal">
+        <!-- CHANGE: email at phone -->
+        <p><strong>Email:</strong> <span id="emailText">soredashaine@gmail.com</span> <button class="copy-btn" id="copyEmail">Copy</button></p>
+        <p><strong>Phone:</strong> 0945 411 0790</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shaine-soreda-534973442/" target="_blank" rel="noopener">Shaine Soreda</a></p>
+        <p><strong>Location:</strong> Parañaque City, Philippines</p>
+      </div>
+      <form class="card contact-form reveal" id="contactForm">
+        <input type="text" id="cName" placeholder="Your name" required />
+        <textarea id="cMsg" rows="5" placeholder="Message" required></textarea>
+        <button class="btn btn-primary" type="submit">Send message ♡</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REFLECTION ===================== -->
+<section id="reflection">
+  <div class="container">
+    <div class="section-title reveal"><h2>Reflection</h2><p>My journey through the BSIT program.</p></div>
+    <div class="card reveal" style="max-width:860px;margin:0 auto">
+      <p>I took the STEM strand in senior high school at Parañaque National High School – Main because my dream was to become a nurse. IT was never my first plan. When it was time to choose a course, I learned that IT is in demand and that it is easier to find a job in this field, so I decided to try it. My only experience with technology was at my aunt's computer shop from 2021 to 2022, where I watched over the shop, helped customers use the computers and handled printing. Before BSIT, I only knew the basics of using a computer, and I was not confident that I could learn programming or advanced Excel.</p>
+      <p>At Datamex College of Saint Adeline, I learned things that I could not do before. I can now work with Excel formulas and charts, write simple code, and keep up with my classmates in a field that once felt too hard for me. The five IT webinars I attended in August 2026 also taught me the basics of network security, zero trust, digital office skills and IoT security. Every task I finished showed me that I can learn this, one step at a time.</p>
+      <p>My biggest challenge was starting from almost zero. At the beginning I did not know how to use a computer well, and Excel and coding felt impossible. I handled it by practicing, asking questions, and not giving up. I still need to improve in networking, SQL and databases, and advanced Excel such as pivot tables and dashboards. My plan is to practice a little every week, learn Cisco Packet Tracer, MySQL and Power BI, and aim for certifications like the Google IT Support Certificate and Microsoft Excel (MOS).</p>
+      <p>I am ready to start my IT career because I have already shown that I can learn things that once felt impossible. I have hands-on experience with Excel, printing and helping customers, and I am reliable and willing to keep learning. I may not know everything yet, but I know how to learn, how to troubleshoot, and how to work with a team. I am open to any role in the IT field where I can grow, and I am excited to start.</p>
+    </div>
+
+    <div class="section-title reveal" style="margin-top:60px"><h2>Final portfolio checklist</h2><p>Tick a box only when the evidence is on this site.</p></div>
+    <div style="max-width:860px;margin:0 auto">
+      <div class="progress-label" id="progressLabel">0 of 0 done</div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <ul class="checklist" id="checklist"></ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Rovilyn Shaine J. Soreda. BSIT, Datamex College of Saint Adeline. <a href="#home">Back to top</a>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <div><img id="lbImg" alt="" /><div class="lb-cap" id="lbCap"></div></div>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next">›</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
